@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة التسويق والتطوير الرقمي | Zone Spa – الرياض | مجموعة كاف لتطوير الأعمال</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kaaf-dark-navy: #040914;
+            --kaaf-navy-surface: #071025;
+            --kaaf-navy-card: #0b1836;
+            --kaaf-blue: #1d4ed8;
+            --kaaf-blue-light: #38bdf8;
+            --kaaf-cyan-glow: #00d8f6;
+            --saudi-gold: #d4af37;
+            --saudi-gold-light: #fde047;
+            --whatsapp-green: #25d366;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--kaaf-dark-navy);
+            color: #f8fafc;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .bg-canvas-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -10;
+            background: 
+                radial-gradient(circle at 85% 15%, rgba(0, 216, 246, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(29, 78, 216, 0.20) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 55%),
+                linear-gradient(180deg, rgba(4, 9, 20, 0.96) 0%, rgba(7, 16, 37, 0.98) 50%, rgba(4, 9, 20, 0.99) 100%);
+            backdrop-filter: blur(10px);
+            pointer-events: none;
+        }
+
+        .high-glow-blue {
+            box-shadow: 0 0 50px rgba(0, 216, 246, 0.35), 0 0 100px rgba(29, 78, 216, 0.2);
+        }
+
+        @keyframes shimmerRadiance {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .radiant-shimmer-text {
+            background: linear-gradient(90deg, #38bdf8 0%, #ffffff 25%, #fde047 50%, #ffffff 75%, #38bdf8 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shimmerRadiance 4s linear infinite;
+        }
+
+        @keyframes moveDividerCyanGold {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulseGlowDiamond {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 216, 246, 0.6), 0 0 35px rgba(212, 175, 55, 0.5);
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(56, 189, 248, 0.9), 0 0 60px rgba(253, 224, 71, 0.8);
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+        }
+
+        .section-divider {
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, #38bdf8, #d4af37, #00d8f6, #fde047, transparent);
+            background-size: 200% 100%;
+            animation: moveDividerCyanGold 4s ease infinite;
+            border-radius: 9999px;
+            margin: 2.5rem 0;
+            box-shadow: 0 0 25px rgba(0, 216, 246, 0.45), 0 0 45px rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fde047;
+            background-color: var(--kaaf-dark-navy);
+            padding: 2px 10px;
+            font-size: 13px;
+            animation: pulseGlowDiamond 2.5s infinite;
+            border-radius: 9999px;
+            border: 1px solid rgba(56, 189, 248, 0.5);
+            transform: translate(-50%, -50%);
+        }
+
+        .card-dark {
+            background: linear-gradient(145deg, rgba(11, 24, 54, 0.94), rgba(7, 16, 37, 0.92));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.12), 0 0 25px rgba(0, 216, 246, 0.15);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-dark:hover {
+            border-color: rgba(253, 224, 71, 0.8);
+            box-shadow: 0 30px 70px -10px rgba(0, 216, 246, 0.4), 0 0 45px rgba(212, 175, 55, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .card-inner {
+            background: linear-gradient(135deg, rgba(15, 33, 71, 0.85), rgba(9, 20, 45, 0.85));
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card-inner:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 12px 30px rgba(0, 216, 246, 0.3), 0 0 20px rgba(212, 175, 55, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .motion-item {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .motion-item:hover {
+            transform: translateX(-4px) scale(1.01);
+            border-color: #fde047;
+            box-shadow: 0 8px 25px rgba(0, 216, 246, 0.25);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulseWhatsAppGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(37, 211, 102, 0.95), 0 0 60px rgba(37, 211, 102, 0.6);
+                transform: scale(1.08);
+            }
+        }
+
+        .whatsapp-float-circle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background-color: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulseWhatsAppGlow 2.5s infinite ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float-circle:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        @keyframes floatLogoGlow {
+            0%, 100% {
+                transform: translateY(0px);
+                box-shadow: 0 0 20px rgba(0, 216, 246, 0.45), 0 0 40px rgba(212, 175, 55, 0.25);
+            }
+            50% {
+                transform: translateY(-8px);
+                box-shadow: 0 0 35px rgba(56, 189, 248, 0.75), 0 0 55px rgba(253, 224, 71, 0.45);
+            }
+        }
+
+        .floating-logo-container {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 9999;
+            animation: floatLogoGlow 3.5s infinite ease-in-out;
+        }
+
+        .gradient-header-radiant {
+            background: linear-gradient(135deg, rgba(4, 9, 20, 0.98), rgba(7, 16, 37, 0.96), rgba(15, 33, 71, 0.94), rgba(4, 9, 20, 0.99));
+            border-bottom: 2px solid rgba(56, 189, 248, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(0, 216, 246, 0.25);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #040914;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #1d4ed8, #38bdf8, #d4af37);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased pb-12">
+
+    <div class="bg-canvas-overlay"></div>
+
+    <!-- Floating Logo Widget -->
+    <div class="floating-logo-container hidden sm:block">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" title="مجموعة كاف لتطوير الأعمال">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-slate-950/95 backdrop-blur-md p-1.5 rounded-2xl border-2 border-cyan-400 shadow-2xl flex items-center justify-center transition-transform hover:scale-110">
+                <img src="https://i.ibb.co/PZxBrJrr/1783599594349.jpg" alt="شعار كاف العائم" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/060d21/38bdf8?text=KAAF'">
+            </div>
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966537553910" target="_blank" rel="noopener noreferrer" class="whatsapp-float-circle" title="تواصل معنا عبر واتساب">
+        <svg class="w-9 h-9 fill-current text-white" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c.969.585 1.961.948 3.123.948 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.769-5.768-5.769zm3.364 8.213c-.149.419-.748.775-1.05.823-.284.045-.653.076-1.06-.057-.253-.083-.585-.198-1.015-.386-1.785-.783-2.951-2.578-3.04-2.698-.089-.12-1.076-1.434-1.076-2.735 0-1.302.684-1.942.926-2.203.242-.261.53-.326.707-.326.177 0 .354.002.508.01.163.008.382-.062.598.455.223.535.762 1.859.829 1.995.067.136.111.296.022.473-.089.177-.134.286-.264.441-.131.155-.276.347-.394.465-.132.132-.27.275-.116.539.155.264.688 1.134 1.474 1.834 1.011.9 1.863 1.179 2.128 1.311.264.132.419.11.574-.067.155-.177.663-.773.84-1.039.177-.265.354-.221.597-.132.243.088 1.547.73 1.812.863.265.132.442.199.508.31.066.11.066.641-.083 1.06zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.307C8.423 21.534 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+        </svg>
+    </a>
+
+    <!-- Header Section -->
+    <header class="gradient-header-radiant text-white pt-8 pb-10 px-4 relative overflow-hidden">
+        <div class="absolute -top-12 -right-12 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+        <div class="absolute -bottom-12 -left-12 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-4">
+                <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-500 hover:scale-110">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto bg-slate-950/95 p-2 rounded-3xl border-2 border-cyan-400 shadow-2xl high-glow-blue flex items-center justify-center">
+                        <img src="https://i.ibb.co/PZxBrJrr/1783599594349.jpg" alt="شعار شركة كاف لتطوير الأعمال" class="w-full h-full object-cover rounded-2xl" onerror="this.src='https://placehold.co/150x150/060d21/38bdf8?text=KAAF'">
+                    </div>
+                </a>
+            </div>
+
+            <div class="block">
+                <div class="inline-flex items-center gap-2 bg-slate-900/90 border border-cyan-400/60 px-5 py-2 rounded-full text-xs sm:text-sm font-bold mb-3 text-cyan-300 shadow-xl">
+                    <span class="text-amber-400">⚡</span>
+                    <span>العميل: Zone Spa – الرياض</span>
+                    <span class="text-slate-500">|</span>
+                    <span class="text-amber-300">مدة الخطة: شهر واحد</span>
+                </div>
+            </div>
+
+            <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-2 text-white drop-shadow-2xl radiant-shimmer-text">
+                خطة التسويق والتطوير الرقمي لمركز Zone Spa
+            </h1>
+            <p class="text-base sm:text-xl text-cyan-300 font-bold mb-3 drop-shadow">
+                مجموعة كاف لتطوير الأعمال
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-2 sm:px-4 -mt-5 relative z-20 space-y-4">
+
+        <!-- أولًا: المقدمة والملخص التنفيذي -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-cyan-400 pr-3 mb-4">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-cyan-400 text-2xl">📌</span>
+                    <span>أولًا: المقدمة والملخص التنفيذي</span>
+                </h2>
+            </div>
+            <div class="space-y-3 text-slate-300 leading-relaxed text-xs sm:text-sm">
+                <p class="bg-slate-950/80 p-4 rounded-2xl border border-cyan-500/20 text-slate-200 leading-relaxed shadow-inner">
+                    تهدف هذه الخطة إلى تطوير الحضور الرقمي لمركز Zone Spa في مدينة الرياض، وتعزيز قدرته على الوصول إلى العملاء المستهدفين، وزيادة الحجوزات، وتحسين كفاءة الأنشطة التسويقية من خلال استراتيجية متكاملة تجمع بين إدارة حسابات التواصل الاجتماعي، وإدارة الحملات الإعلانية الممولة، وتحسين محركات البحث (SEO)، وتطوير تجربة العميل من مرحلة التعرف على الخدمات وحتى إتمام الحجز.
+                </p>
+                <p class="bg-slate-950/80 p-4 rounded-2xl border border-cyan-500/20 text-slate-200 leading-relaxed shadow-inner">
+                    يمتلك المركز فرصة للاستفادة من تنوع خدماته، ووجود موقع إلكتروني يعرض الخدمات والعروض، إلى جانب إمكانية استهداف العملاء في النطاق الجغرافي المحيط به. ويعتمد نجاح الخطة على توظيف هذه العناصر ضمن منظومة تسويقية مترابطة تركز على جذب العملاء المحتملين، وتحويل الاهتمام إلى حجوزات فعلية، وتعزيز فرص تكرار الزيارة.
+                </p>
+                <div class="card-inner p-4 rounded-xl border border-amber-400/30 text-amber-300 font-bold flex items-center gap-3">
+                    <span class="text-xl">🎯</span>
+                    <span>الهدف الرئيسي: بناء منظومة تسويق رقمي قابلة للقياس، تسهم في زيادة الحجوزات، وتعزيز الظهور المحلي، وتحسين العائد من الأنشطة التسويقية.</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ثانيًا: تحليل الوضع الحالي -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-amber-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-amber-400 font-mono text-2xl">02</span>
+                    <span>ثانيًا: تحليل الوضع الحالي</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <!-- 1 -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-3">
+                    <h3 class="font-black text-cyan-300 mb-1">1. تحليل الموقع الإلكتروني</h3>
+                    <p>يمثل الموقع الإلكتروني نقطة اتصال أساسية بين المركز والعملاء المحتملين، حيث يتيح التعرف على الخدمات والعروض ومعلومات الوصول إلى المركز.</p>
+                    <p>ومن خلال مراجعة الموقع، تبرز مجموعة من فرص التطوير التي يمكن استغلالها لتحسين تجربة الزائر وزيادة احتمالية إتمام الحجز.</p>
+                    <strong class="text-amber-300 block mt-2">أبرز فرص التحسين:</strong>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-200">
+                        <li>تحسين الصفحة الرئيسية لتوضيح طبيعة الخدمات والمميزات التنافسية للمركز، مع إبراز وسائل الحجز والتواصل بصورة مباشرة.</li>
+                        <li>تطوير صفحات الخدمات من خلال تقديم وصف لكل خدمة، وبيان تفاصيلها ومدتها وأسعارها عند اعتمادها من المركز.</li>
+                        <li>تحسين طريقة عرض العروض والباقات، مع توضيح محتويات كل باقة وقيمتها وشروط الاستفادة منها.</li>
+                        <li>مراجعة أزرار الحجز وروابط التواصل للتأكد من سهولة استخدامها وعملها بصورة صحيحة.</li>
+                        <li>تحسين تجربة التصفح عبر الهواتف المحمولة، نظرًا لأهمية الوصول السريع إلى المعلومات وإتمام الحجز من الهاتف.</li>
+                        <li>مراجعة سرعة الموقع والجوانب التقنية المؤثرة في تجربة المستخدم والظهور في محركات البحث.</li>
+                        <li>تحسين عناصر الثقة، بما يشمل التقييمات الحقيقية، وصور المكان والخدمات، ومعلومات الموقع ووسائل التواصل.</li>
+                    </ul>
+                    <p class="text-xs text-cyan-200 bg-slate-950 p-2.5 rounded-xl border border-cyan-500/30">
+                        <strong>التوصية:</strong> البدء بتحسين الموقع الحالي والاستفادة من بنيته الموجودة، مع تحديد أي احتياجات تطوير إضافية بناءً على نتائج الفحص الفني وقياس الأداء.
+                    </p>
+                </div>
+
+                <!-- 2 -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-3">
+                    <h3 class="font-black text-amber-300 mb-1">2. تحليل الفرص التسويقية للنشاط</h3>
+                    <p>تتميز خدمات السبا والعناية الشخصية بقدرتها على الاستفادة من التسويق المحلي والمحتوى المرئي والعروض الموسمية، إلى جانب فرص استقطاب العملاء الباحثين مباشرة عن خدمات محددة.</p>
+                    <strong class="text-cyan-300 block mt-2">تتمثل أبرز الفرص في:</strong>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-200">
+                        <li>استهداف الباحثين عن خدمات المساج والسبا والحمام المغربي في الرياض والأحياء القريبة من موقع المركز.</li>
+                        <li>إبراز تجربة العميل وجودة الخدمة وبيئة المركز من خلال محتوى مرئي احترافي.</li>
+                        <li>تقديم باقات تجمع بين الخدمات المناسبة لرفع متوسط قيمة الحجز.</li>
+                        <li>الاستفادة من المناسبات والمواسم في تصميم عروض تسويقية مدروسة.</li>
+                        <li>تحسين الظهور في نتائج البحث المحلية لزيادة فرص الوصول إلى العملاء ذوي النية الشرائية.</li>
+                        <li>تطوير آلية متابعة الاستفسارات والعملاء السابقين لتشجيع إتمام الحجز وتكرار الزيارة.</li>
+                    </ul>
+                </div>
+
+                <!-- 3 -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-3">
+                    <h3 class="font-black text-cyan-300 mb-1">3. تحليل المنافسة</h3>
+                    <p>تتطلب المنافسة في قطاع السبا والعناية الشخصية الجمع بين جودة التجربة، ووضوح الأسعار، وسهولة الحجز، وقوة الحضور الرقمي.</p>
+                    <p>وبناءً على طبيعة النشاط، يُوصى بمراجعة المنافسين في النطاق الجغرافي المحيط بالمركز، وتحليل طريقة عرض الخدمات والباقات والأسعار والتقييمات والمحتوى الإعلاني.</p>
+                    <strong class="text-amber-300 block mt-2">التوصيات التنافسية:</strong>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-200">
+                        <li>التركيز على إبراز المميزات الفعلية للمركز بدل الاعتماد على الخصومات وحدها.</li>
+                        <li>تحسين وضوح الخدمات والأسعار ومدة كل جلسة لتسهيل اتخاذ قرار الحجز.</li>
+                        <li>تطوير محتوى يعكس تجربة المركز ويعزز ثقة العملاء.</li>
+                        <li>الاستفادة من التقييمات الحقيقية وتجارب العملاء وفق موافقتهم.</li>
+                        <li>اختبار الباقات والعروض المختلفة لتحديد الخيارات الأكثر جذبًا للعملاء والأفضل من حيث الربحية.</li>
+                    </ul>
+                    <p class="text-xs text-amber-200 bg-slate-950 p-2.5 rounded-xl border border-amber-500/30">
+                        ولا يُنصح بالدخول في منافسة سعرية مستمرة؛ بل ببناء قيمة واضحة للخدمة وتحسين تجربة العميل قبل الحجز وأثناءه وبعده.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ثالثًا: أهداف الخطة التسويقية -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-cyan-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-cyan-400 font-mono text-2xl">03</span>
+                    <span>ثالثًا: أهداف الخطة التسويقية</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
+                <div class="card-inner p-4 rounded-xl border border-cyan-500/20 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>زيادة الوعي بالمركز وخدماته لدى الجمهور المستهدف في الرياض.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-cyan-500/20 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>زيادة عدد الاستفسارات المؤهلة والحجوزات الناتجة عن الأنشطة التسويقية.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-cyan-500/20 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>تعزيز الظهور المحلي للمركز في محركات البحث.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-cyan-500/20 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>تحسين كفاءة الحملات الإعلانية وتقليل تكلفة الحصول على الحجوزات قدر الإمكان.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-amber-400/20 motion-item flex items-start gap-2.5">
+                    <span class="text-amber-400 font-bold">•</span>
+                    <span>تطوير المحتوى الرقمي بما يعكس طبيعة الخدمات ويعزز الثقة.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-amber-400/20 motion-item flex items-start gap-2.5">
+                    <span class="text-amber-400 font-bold">•</span>
+                    <span>تحسين رحلة العميل من مشاهدة المحتوى أو الإعلان وحتى إتمام الحجز.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-amber-400/20 motion-item flex items-start gap-2.5">
+                    <span class="text-amber-400 font-bold">•</span>
+                    <span>زيادة فرص عودة العملاء السابقين والاستفادة من الباقات والعروض المناسبة.</span>
+                </div>
+                <div class="card-inner p-4 rounded-xl border border-amber-400/20 motion-item flex items-start gap-2.5">
+                    <span class="text-amber-400 font-bold">•</span>
+                    <span>تأسيس آلية واضحة لقياس النتائج وتحديد القنوات والخدمات الأكثر فاعلية.</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- رابعًا: محاور العمل والاستراتيجية التنفيذية -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-amber-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-amber-400 font-mono text-2xl">04</span>
+                    <span>رابعًا: محاور العمل والاستراتيجية التنفيذية</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <!-- المحور الأول -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-2.5">
+                    <h3 class="font-black text-cyan-300">المحور الأول: إدارة حسابات التواصل الاجتماعي</h3>
+                    <p><strong class="text-amber-300">الهدف:</strong> تطوير الحضور الرقمي للمركز، وتعزيز الثقة بالخدمات، وتحويل التفاعل إلى فرص حجز فعلية.</p>
+                    <strong class="text-slate-200 block">آلية التنفيذ:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>مراجعة الحسابات الحالية وتقييم مستوى تنظيمها وتناسق هويتها البصرية.</li>
+                        <li>إعداد خطة محتوى شهرية تتناسب مع طبيعة النشاط والجمهور المستهدف.</li>
+                        <li>تطوير المحتوى التعريفي بالخدمات ومميزاتها، مع توضيح المعلومات التي يحتاجها العميل قبل الحجز.</li>
+                        <li>إعداد محتوى مرئي قصير يبرز أجواء المركز والخدمات المتاحة، بالاعتماد على المواد المصورة المتوفرة.</li>
+                        <li>تصميم منشورات مخصصة للعروض والباقات والخدمات ذات الأولوية.</li>
+                        <li>إعداد محتوى تفاعلي يساعد على زيادة المشاركة والتعرف على اهتمامات الجمهور.</li>
+                        <li>تضمين دعوات واضحة للحجز والتواصل في المحتوى المناسب.</li>
+                        <li>متابعة مؤشرات الأداء وتقييم أنواع المحتوى الأكثر جذبًا وفاعلية.</li>
+                    </ul>
+                    <p class="text-xs text-slate-400">يتم تحديد متطلبات التصوير الميداني بصورة مستقلة، ولا يشمل هذا النطاق التصوير الاحترافي داخل المركز ما لم يتم الاتفاق عليه.</p>
+                </div>
+
+                <!-- المحور الثاني -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-2.5">
+                    <h3 class="font-black text-amber-300">المحور الثاني: إدارة الحملات الإعلانية الممولة</h3>
+                    <p><strong class="text-cyan-300">الهدف:</strong> الوصول إلى العملاء المحتملين ضمن النطاق الجغرافي المناسب، وزيادة الاستفسارات والحجوزات من خلال حملات إعلانية قابلة للقياس والتحسين.</p>
+                    <strong class="text-slate-200 block">آلية التنفيذ:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>مراجعة الحسابات الإعلانية السابقة، إن وجدت، وتحليل نتائجها وتحديد فرص التحسين.</li>
+                        <li>تحديد الخدمات والباقات التي تستحق التركيز الإعلاني وفق الطلب وهامش الربح والطاقة الاستيعابية للمركز.</li>
+                        <li>إعداد الحملات على المنصات المناسبة، مثل سناب شات وإنستجرام، مع دراسة جدوى إعلانات البحث على Google وفق حجم البحث والميزانية المتاحة.</li>
+                        <li>تحديد النطاق الجغرافي المستهدف بما يتناسب مع موقع المركز والعملاء المحتملين في الأحياء القريبة.</li>
+                        <li>إعداد رسائل إعلانية متنوعة تبرز الخدمات والعروض وتجربة العميل.</li>
+                        <li>اختبار أكثر من صيغة إعلانية ومادة مرئية لتحديد الأفضل أداءً.</li>
+                        <li>متابعة نتائج الحملات وتحسين الاستهداف والإعلانات وتوزيع الميزانية وفق البيانات الفعلية.</li>
+                        <li>قياس عدد الاستفسارات وتكلفتها، ومتابعة تحولها إلى حجوزات مؤكدة بالتنسيق مع المركز.</li>
+                    </ul>
+                    <strong class="text-cyan-300 block mt-2">مؤشرات الأداء:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>عدد الاستفسارات الناتجة عن الحملات.</li>
+                        <li>متوسط تكلفة الاستفسار.</li>
+                        <li>نسبة تحويل الاستفسارات إلى حجوزات.</li>
+                        <li>تكلفة الحصول على الحجز المؤكد.</li>
+                        <li>الإيرادات الناتجة عن الحملات، عند توفر بيانات دقيقة عن الحجوزات والمبيعات.</li>
+                    </ul>
+                    <p class="text-xs text-amber-200 bg-slate-950 p-2.5 rounded-xl border border-amber-500/30">
+                        ملاحظة: الميزانية الإعلانية المدفوعة للمنصات غير مشمولة ضمن أتعاب الإدارة، ويتحملها المركز بصورة مستقلة.
+                    </p>
+                </div>
+
+                <!-- المحور الثالث -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-2.5">
+                    <h3 class="font-black text-cyan-300">المحور الثالث: تحسين محركات البحث SEO</h3>
+                    <p><strong class="text-amber-300">الهدف:</strong> تعزيز فرص ظهور الموقع في نتائج البحث، وزيادة الزيارات ذات الصلة بالخدمات التي يقدمها المركز، ودعم استقطاب العملاء من البحث العضوي على المدى المتوسط والطويل.</p>
+                    <strong class="text-slate-200 block">آلية التنفيذ:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>إجراء تدقيق أولي للموقع لتحديد المشكلات الفنية والمحتوى الذي يحتاج إلى تحسين.</li>
+                        <li>تحليل الكلمات المفتاحية المرتبطة بالخدمات والموقع الجغرافي، مثل: مساج حي الرمال، سبا في الرياض، حمام مغربي في الرياض، خدمات العناية الشخصية في حي الرمال.</li>
+                        <li>مراجعة عناوين الصفحات والأوصاف التعريفية والعناوين الداخلية.</li>
+                        <li>تحسين صفحات الخدمات الأساسية بما يتناسب مع نية البحث واحتياجات المستخدم.</li>
+                        <li>تحسين الروابط الداخلية بين الصفحات ذات الصلة لتسهيل التنقل وفهم بنية الموقع.</li>
+                        <li>مراجعة سرعة الموقع وتجربة التصفح عبر الهواتف المحمولة.</li>
+                        <li>مراجعة قابلية فهرسة الصفحات وظهورها في محركات البحث.</li>
+                        <li>إعداد توصيات فنية لتحسين الموقع حسب الأولوية وإمكانية التنفيذ.</li>
+                        <li>متابعة بيانات الظهور والنقرات والزيارات العضوية عند توفر أدوات القياس المناسبة.</li>
+                    </ul>
+                    <strong class="text-cyan-300 block mt-2">تحسين الظهور المحلي:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>مراجعة ملف النشاط التجاري على Google، إذا كان متاحًا للمركز.</li>
+                        <li>توحيد بيانات الاسم العنوان ورقم التواصل بين الموقع والمنصات المناسبة.</li>
+                        <li>تحسين وصف النشاط والخدمات وإضافة صور حقيقية ومحدثة.</li>
+                        <li>وضع آلية لتشجيع العملاء على ترك تقييمات حقيقية، مع الرد على التقييمات بصورة مهنية.</li>
+                    </ul>
+                    <strong class="text-amber-300 block mt-2">المخرجات:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>تقرير تدقيق أولي للموقع.</li>
+                        <li>قائمة بالكلمات المفتاحية المستهدفة.</li>
+                        <li>تحسين الصفحات ذات الأولوية ضمن نطاق العمل المتفق عليه.</li>
+                        <li>توصيات فنية ومحتوى مقترح لدعم الظهور العضوي والمحلي.</li>
+                    </ul>
+                    <p class="text-xs text-amber-200 bg-slate-950 p-2.5 rounded-xl border border-amber-500/30">
+                        يُراعى أن نتائج تحسين محركات البحث تحتاج إلى وقت، وتتأثر بالمنافسة والحالة التقنية للموقع؛ لذلك لا يمكن ضمان ترتيب محدد أو نتائج نهائية خلال شهر واحد.
+                    </p>
+                </div>
+
+                <!-- المحور الرابع -->
+                <div class="card-inner p-4 rounded-2xl border border-slate-800 space-y-2.5">
+                    <h3 class="font-black text-amber-300">المحور الرابع: تحسين تجربة الحجز والتحويل</h3>
+                    <p><strong class="text-cyan-300">الهدف:</strong> تقليل فقدان العملاء المحتملين وتحسين نسبة تحويل الاستفسارات إلى حجوزات مؤكدة.</p>
+                    <strong class="text-slate-200 block">آلية التنفيذ:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>مراجعة رحلة العميل من الإعلان أو الموقع حتى التواصل وإتمام الحجز.</li>
+                        <li>التأكد من سهولة الوصول إلى وسائل الحجز والتواصل.</li>
+                        <li>إعداد رسائل ترحيبية وردود جاهزة للاستفسارات المتكررة المتعلقة بالخدمات والأسعار والمواعيد.</li>
+                        <li>تنظيم آلية متابعة الاستفسارات التي لم تتحول إلى حجوزات.</li>
+                        <li>تسجيل مصدر الاستفسار لتحديد القنوات الأكثر فاعلية.</li>
+                        <li>تصنيف الاستفسارات بحسب حالتها، مثل: حجز مؤكد، متابعة مطلوبة، أو لم يتم الحجز.</li>
+                        <li>اقتراح باقات وعروض مناسبة تساعد على رفع متوسط قيمة الحجز دون الإضرار بهامش الربح.</li>
+                        <li>وضع آلية للتواصل مع العملاء السابقين، وفق موافقتهم، للتعريف بالعروض والخدمات المناسبة.</li>
+                    </ul>
+                    <p class="text-xs text-cyan-200 bg-slate-950 p-2.5 rounded-xl border border-cyan-500/30">
+                        <strong>المخرجات:</strong> تحسين تنظيم الاستفسارات، ورفع وضوح خطوات الحجز، وتوفير بيانات تساعد على تقييم كفاءة التسويق والمبيعات.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- خامسًا: خطة التنفيذ خلال شهر -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-cyan-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-cyan-400 font-mono text-2xl">05</span>
+                    <span>خامسًا: خطة التنفيذ خلال شهر</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-3 text-xs sm:text-sm text-slate-200">
+                <p class="text-slate-300">تُنفذ الأعمال وفق الأولويات التالية، مع إمكانية تنفيذ بعض المهام بالتوازي حسب سرعة توفير الصلاحيات والمواد اللازمة.</p>
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                    <strong class="text-cyan-300 block mb-1">مرحلة التجهيز والتحليل:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>مراجعة الموقع والحسابات الرقمية.</li>
+                        <li>تحليل المنافسين وتحديد الخدمات ذات الأولوية.</li>
+                        <li>مراجعة بيانات الأداء السابقة، إن وجدت.</li>
+                        <li>تحديد مؤشرات الأداء وآلية تتبع الاستفسارات والحجوزات.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                    <strong class="text-amber-300 block mb-1">مرحلة إعداد الأصول التسويقية:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>تجهيز خطة المحتوى الشهرية.</li>
+                        <li>إعداد التصميمات والنصوص التسويقية.</li>
+                        <li>تجهيز المواد الإعلانية بالتنسيق مع المركز.</li>
+                        <li>مراجعة صفحات الموقع ووسائل التواصل والحجز.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                    <strong class="text-cyan-300 block mb-1">مرحلة الإطلاق والتحسين:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>إطلاق الحملات الإعلانية بعد اعتماد المواد والميزانية.</li>
+                        <li>متابعة أداء الحملات وتحسين الإعلانات وفق النتائج.</li>
+                        <li>تنفيذ تحسينات SEO المتفق عليها.</li>
+                        <li>تطوير المحتوى ومتابعة التفاعل والاستفسارات.</li>
+                        <li>مراجعة جودة الحجوزات الواردة بالتنسيق مع المركز.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                    <strong class="text-amber-300 block mb-1">مرحلة التقييم والتوصيات:</strong>
+                    <ul class="list-disc list-inside space-y-1 text-slate-200">
+                        <li>إعداد تقرير أداء نهاية الشهر.</li>
+                        <li>تحليل نتائج المحتوى والحملات والزيارات العضوية.</li>
+                        <li>تقييم تكلفة الاستفسارات والحجوزات عند توفر البيانات.</li>
+                        <li>تحديد الخدمات والقنوات الأعلى أداءً.</li>
+                        <li>تقديم توصيات للشهر التالي بناءً على النتائج الفعلية.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- سادسًا: مؤشرات قياس الأداء -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-amber-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-amber-400 font-mono text-2xl">06</span>
+                    <span>سادسًا: مؤشرات قياس الأداء</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p>يتم تقييم نجاح الخطة من خلال مجموعة من المؤشرات التي ترتبط بالأهداف التسويقية والتجارية للمركز.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="card-inner p-4 rounded-2xl border border-slate-800">
+                        <strong class="text-cyan-300 block mb-2">مؤشرات التواصل الاجتماعي:</strong>
+                        <ul class="list-disc list-inside space-y-1 text-slate-200">
+                            <li>الوصول والمشاهدات والتفاعل.</li>
+                            <li>الزيارات إلى الحسابات والموقع.</li>
+                            <li>الاستفسارات الناتجة عن المحتوى.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-inner p-4 rounded-2xl border border-slate-800">
+                        <strong class="text-amber-300 block mb-2">مؤشرات الحملات الإعلانية:</strong>
+                        <ul class="list-disc list-inside space-y-1 text-slate-200">
+                            <li>الإنفاق الإعلاني.</li>
+                            <li>عدد الاستفسارات وتكلفتها.</li>
+                            <li>عدد الحجوزات المؤكدة وتكلفة الحصول عليها.</li>
+                            <li>معدل تحويل الاستفسارات إلى حجوزات.</li>
+                            <li>العائد الإعلاني عند توفر بيانات الإيرادات المنسوبة إلى الحملات.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-inner p-4 rounded-2xl border border-slate-800">
+                        <strong class="text-cyan-300 block mb-2">مؤشرات SEO والظهور المحلي:</strong>
+                        <ul class="list-disc list-inside space-y-1 text-slate-200">
+                            <li>مرات الظهور والنقرات من نتائج البحث.</li>
+                            <li>الزيارات العضوية إلى الموقع.</li>
+                            <li>أداء الكلمات المفتاحية المستهدفة.</li>
+                            <li>التفاعل مع ملف النشاط التجاري، عند توفر بياناته.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-inner p-4 rounded-2xl border border-slate-800">
+                        <strong class="text-amber-300 block mb-2">مؤشرات الحجز والاحتفاظ بالعملاء:</strong>
+                        <ul class="list-disc list-inside space-y-1 text-slate-200">
+                            <li>نسبة إتمام الحجز من إجمالي الاستفسارات.</li>
+                            <li>متوسط قيمة الحجز.</li>
+                            <li>عدد العملاء العائدين.</li>
+                            <li>أداء الباقات والعروض المختلفة.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="text-xs text-amber-200 bg-slate-950 p-3 rounded-xl border border-amber-500/30">
+                    يتم تحديد المستهدفات الرقمية بعد مراجعة بيانات المركز، ومتوسط قيمة الحجز، والطاقة الاستيعابية، والميزانية الإعلانية المتاحة. ولا يتم ضمان عدد محدد من الحجوزات قبل دراسة هذه العوامل.
+                </p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- سابعًا: المتطلبات اللازمة لبدء التنفيذ -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-cyan-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-cyan-400 font-mono text-2xl">07</span>
+                    <span>سابعًا: المتطلبات اللازمة لبدء التنفيذ</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-2 text-xs sm:text-sm text-slate-200">
+                <p class="text-slate-300 mb-2">لضمان تنفيذ الخطة بكفاءة، يتطلب العمل توفير ما يلي:</p>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>صلاحيات الوصول إلى الموقع الإلكتروني وحسابات التواصل الاجتماعي والحسابات الإعلانية.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>قائمة محدثة بالخدمات والأسعار ومدد الجلسات والباقات والعروض.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>المواد المصورة المتاحة للمركز، وأي محتوى سابق يمكن الاستفادة منه.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>بيانات الحملات السابقة، إن وجدت، بما يشمل الإنفاق والنتائج والحجوزات.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>معلومات عن متوسط قيمة الحجز والخدمات الأعلى طلبًا وربحية.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>بيانات الحجوزات اللازمة لقياس النتائج، بالقدر الضروري مع الحفاظ على خصوصية العملاء.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>اعتماد المحتوى والمواد الإعلانية في المواعيد المتفق عليها.</span>
+                </div>
+                <div class="card-inner p-3.5 rounded-xl border border-slate-800 motion-item flex items-start gap-2.5">
+                    <span class="text-cyan-400 font-bold">•</span>
+                    <span>تحديد الميزانية الإعلانية بصورة مستقلة عن أتعاب الإدارة.</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ثامنًا: عرض السعر -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-amber-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-amber-400 font-mono text-2xl">08</span>
+                    <span>ثامنًا: عرض السعر</span>
+                </h2>
+            </div>
+
+            <div class="mb-5 card-inner p-5 sm:p-6 rounded-2xl border border-slate-800">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 border-b border-slate-800 pb-4">
+                    <div>
+                        <h3 class="text-base sm:text-xl font-black text-cyan-300">الباقة التسويقية المتكاملة لمركز Zone Spa</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">مدة التنفيذ: شهر واحد</p>
+                    </div>
+                    <div class="bg-slate-950 px-6 py-3 rounded-2xl border border-cyan-400/60 shadow-lg text-center">
+                        <span class="text-[11px] text-slate-400 block">إجمالي قيمة الباقة الشهرية</span>
+                        <span class="text-2xl sm:text-3xl font-black text-amber-400">4,000 ريال سعودي</span>
+                        <span class="text-[10px] text-slate-400 block">لمدة شهر واحد</span>
+                    </div>
+                </div>
+
+                <p class="text-xs font-bold text-cyan-300 mb-2">تشمل الباقة:</p>
+                <div class="space-y-1.5 text-xs text-slate-200 mb-4">
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• إدارة حسابات التواصل الاجتماعي وإعداد خطة المحتوى.</div>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• تصميم 20 منشورًا تسويقيًا بين كتابة المحتوى وموشن جرافيك وتصميمات.</div>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• إعداد وإدارة الحملات الإعلانية الممولة وتحسين أدائها.</div>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• تدقيق SEO وتحسين صفحات الخدمات الأساسية ضمن نطاق العمل المتفق عليه.</div>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• مراجعة الظهور المحلي وملف النشاط التجاري على Google، عند توفره.</div>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• مراجعة تجربة الحجز والتواصل وتنظيم متابعة الاستفسارات.</div>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">• إعداد تقرير أداء ختامي يتضمن النتائج والتوصيات.</div>
+                </div>
+
+                <p class="text-xs font-bold text-slate-300 mb-2">الشروط والملاحظات المالية:</p>
+                <ul class="list-disc list-inside space-y-1.5 text-xs text-slate-300 bg-slate-950/80 p-4 rounded-xl border border-slate-800">
+                    <li>قيمة الباقة لا تشمل الميزانية الإعلانية المدفوعة للمنصات.</li>
+                    <li>لا تشمل الباقة التصوير الميداني الاحترافي أو أتعاب المؤثرين.</li>
+                    <li>لا تشمل تكاليف الأدوات المدفوعة أو التطوير البرمجي الإضافي للموقع.</li>
+                    <li>يبدأ التنفيذ بعد اعتماد العرض وتوفير الصلاحيات والمواد اللازمة.</li>
+                    <li>يتم الاتفاق على آلية السداد وتاريخ بدء التنفيذ ضمن العقد.</li>
+                    <li>يتم تقييم النتائج في نهاية الشهر، وتحديد فرص التطوير واستمرار العمل بناءً على البيانات الفعلية.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- تاسعًا: الخاتمة -->
+        <section class="card-dark rounded-3xl p-5 sm:p-8 shadow-2xl reveal">
+            <div class="border-r-4 border-cyan-400 pr-3 mb-5">
+                <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+                    <span class="text-cyan-400 font-mono text-2xl">09</span>
+                    <span>تاسعًا: الخاتمة</span>
+                </h2>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-950 via-slate-950 to-blue-950 p-6 rounded-3xl border border-cyan-400/80 text-center shadow-2xl">
+                <p class="text-slate-100 text-xs sm:text-sm leading-relaxed font-semibold mb-3">
+                    تمثل هذه الخطة إطارًا عمليًا لتطوير الحضور الرقمي لمركز Zone Spa، وتحسين فرص الوصول إلى العملاء المستهدفين، وزيادة الحجوزات من خلال التكامل بين المحتوى التسويقي والإعلانات الممولة وتحسين محركات البحث وتجربة الحجز.
+                    ويعتمد تحقيق أفضل النتائج على التنفيذ المنظم، وسرعة الاستجابة للاستفسارات، وتوفير البيانات اللازمة لقياس الأداء، والاستمرار في تحسين الأنشطة التسويقية بناءً على النتائج الفعلية.
+                    الهدف النهائي هو بناء منظومة تسويقية مستدامة تدعم نمو المركز، وتحسن كفاءة الإنفاق التسويقي، وتزيد فرص تحويل العملاء المحتملين إلى عملاء فعليين ومتكررين.
+                </p>
+                <div class="mt-4 pt-4 border-t border-slate-800">
+                    <span class="text-cyan-400 font-extrabold text-sm block">مجموعة كاف لتطوير الأعمال</span>
+                    <span class="text-xs text-slate-400 block mt-1">شريككم الاستراتيجي في النمو والتحول الرقمي</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-cyan-200/70 text-xs sm:text-sm py-6 border-t border-cyan-900/80 bg-slate-950/90">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" class="hover:underline font-extrabold text-cyan-300 block mb-1 text-xs sm:text-sm">
+            مجموعة كاف لتطوير الأعمال © 2026
+        </a>
+        <p class="text-slate-400 text-xs">خطة التسويق والتطوير الرقمي — Zone Spa – الرياض</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add("active");
+                        }, index * 50);
+                    }
+                });
+            }, {
+                threshold: 0.05
+            });
+
+            reveals.forEach(reveal => revealObserver.observe(reveal));
+        });
+    </script>
+</body>
+</html>
